@@ -105,84 +105,6 @@ input, select, textarea {
 		line-height: 1.75em;
 	}
 
-
-	/*This is new code that maybe will work*/
-		/* The actual timeline (the vertical ruler) */
-	.timeline {
-		position: relative;
-		max-width: 1200px;
-		margin: 0 auto;
-	}
-	
-	/* The actual timeline (the vertical ruler) */
-	.timeline::after {
-		content: '';
-		position: absolute;
-		width: 6px;
-		background-color: #ddd;
-		top: 0;
-		bottom: 0;
-		left: 0%;
-		margin-left: -3px;
-	}
-	
-	/* Container around content */
-	.container {
-		padding: 10px 40px;
-		position: relative;
-		background-color: inherit;
-		width: 50%;
-		border-bottom: solid 2px #efefef;
-	}
-	
-	/* The circles on the timeline */
-	.container::after {
-		content: '';
-		position: absolute;
-		width: 25px;
-		height: 25px;
-		right: -17px;
-		background-color: #ddd;
-		border: 4px solid #FF9F55;
-		top: 15px;
-		border-radius: 50%;
-		z-index: 1;
-	}
-
-	/* Place the container to the right */
-	.container.right {
-		left: 0%;
-	}
-	
-	
-	/* Add arrows to the right container (pointing left) */
-	.container.right::before {
-		content: " ";
-		height: 0;
-		position: absolute;
-		top: 22px;
-		width: 0;
-		z-index: 1;
-		left: 30px;
-		border: medium solid rgb(32, 17, 17);
-		border-width: 10px 10px 10px 0;
-		border-color: transparent white transparent transparent;
-	}
-	
-	/* Fix the circle for containers on the right side */
-	.container.right::after {
-		left: -55px;
-	}
-	
-	/* The actual content */
-	.content {
-		padding: 20px 30px;
-		background-color: white;
-		position: relative;
-		border-radius: 6px;
-	}
-	/*End of new code*/
-
 	a {
 		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
@@ -2767,9 +2689,9 @@ input, select, textarea {
 	}
 
 		#main > section {
-			border-top: solid 4px #efefef;
-			margin: 4em 0 0 0;
-			padding: 4em 0 0 0;
+			border-top: solid 2px #efefef;
+			margin: 2em 0 0 0;
+			padding: 2em 0 0 0;
 		}
 
 			#main > section:first-child {
@@ -3298,6 +3220,80 @@ input, select, textarea {
 
 	}
 
+/* Timeline Section */
+	/* The actual timeline (the vertical ruler) */
+	.timeline {
+		position: relative;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	
+	/* The vertical line */
+	.timeline::after {
+		content: '';
+		position: absolute;
+		width: 3px;
+		background-color: #a2a2a2;
+		top: 0;
+		bottom: 0;
+		left: 10px;
+	}
+	
+	/* Container around content */
+	.container {
+		padding: 0px 0px;
+		position: relative;
+		background-color: #ffffff;
+		/* background-color: #f05050; */
+		width: 100%;
+		margin-left: 30px;
+		/* border-bottom: solid 2px #ddd; */
+		/* border-bottom: solid 2px #efefef; */
+	}
+	
+	/* The circles on the timeline */
+	.container::after {
+		content: '';
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background-color: #eee;
+		border: 4px solid #a2a2a2;
+		top: 0%;
+		z-index: 1;
+		margin-left: -26px;
+		margin-top: 4%;
+	}
+	
+	/* Content goes here */
+	.text-box{
+		padding: 20px 30px;
+		/* background:rgba(0, 0, 0, 0.01); */
+		position: relative;
+		border-radius: 6px;
+	}
+	
+	/* Add arrows to the left container (pointing right) */
+	.container.right::before {
+		content: "";
+		position: absolute;
+		height: 0;
+		width: 0;
+		z-index: 1;
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+		border-left: 10px solid #a2a2a2;
+		/* top: 0px;
+		left: 0px; */
+		margin-left: 0px;
+		margin-top: 3.5%;
+	}
+	
+	
+/* End of Timeline Section */
+
+/* Education Section */
 	.education-item {
 		display: flex;
 		align-items: center;
@@ -3305,8 +3301,8 @@ input, select, textarea {
 	
 	.education-item .icon {
 		margin-right: 30px; /* Adjust the spacing as needed */
-		width: 60px; /* Adjust the size as needed */
-		height: 60px; /* Adjust the size as needed */
+		width: 80px; /* Adjust the size as needed */
+		height: 80px; /* Adjust the size as needed */
 	}
 	
 	.text-container {
@@ -3315,7 +3311,17 @@ input, select, textarea {
 		justify-content: center;
 		height: 100%; /* Ensures the text container takes the full height of the parent */
 	}
-	
-	.text-container h3, .text-container p {
+
+	.text-container h3{
 		margin: 0;
 	}
+	
+	.text-container h4{
+		font-size: 100%;
+		margin: 0;
+	}
+	
+	.text-container p{
+		margin: 0;
+	}
+/* End of Education Section */
