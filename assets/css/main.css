@@ -132,7 +132,7 @@ input, select, textarea {
 		position: relative;
 		background-color: inherit;
 		width: 50%;
-		border-bottom: 2px solid #0f0606;
+		border-bottom: solid 2px #efefef;
 	}
 	
 	/* The circles on the timeline */
@@ -2767,7 +2767,7 @@ input, select, textarea {
 	}
 
 		#main > section {
-			border-top: solid 2px #efefef;
+			border-top: solid 4px #efefef;
 			margin: 4em 0 0 0;
 			padding: 4em 0 0 0;
 		}
@@ -3296,4 +3296,26 @@ input, select, textarea {
 				padding-left: 0;
 			}
 
+	}
+
+	.education-item {
+		display: flex;
+		align-items: center;
+	}
+	
+	.education-item .icon {
+		margin-right: 30px; /* Adjust the spacing as needed */
+		width: 60px; /* Adjust the size as needed */
+		height: 60px; /* Adjust the size as needed */
+	}
+	
+	.text-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%; /* Ensures the text container takes the full height of the parent */
+	}
+	
+	.text-container h3, .text-container p {
+		margin: 0;
 	}
