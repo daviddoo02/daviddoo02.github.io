@@ -26,6 +26,34 @@
 		<!-- Main -->
 			<div id="main">
 
+				<div class="timeline">
+					<div class="container right">
+					  <div class="text-box">
+						<h2>2024</h2>
+						<div class="description" style="display: none;">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					  </div>
+					</div>
+					<div class="container right">
+					  <div class="text-box">
+						<h2>2016</h2>
+						<div class="description" style="display: none;">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					  </div>
+					</div>
+					<div class="container right">
+						<div class="text-box">
+						  <h2>1075</h2>
+						  <div class="description" style="display: none;">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						  </div>
+						</div>
+					</div>
+				</div>
+
+
 				<!-- One -->
 					<!-- <section id="one">
 						<header class="major">
@@ -139,6 +167,21 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				var headers = document.querySelectorAll('.container .text-box h2');
+			  
+				headers.forEach(function(header) {
+				  header.addEventListener('click', function() {
+					var description = this.nextElementSibling;
+					if (description.style.display === 'none') {
+					  description.style.display = 'block';
+					} else {
+					  description.style.display = 'none';
+					}
+				  });
+				});
+			  </script>
 
 	</body>
 </html>
