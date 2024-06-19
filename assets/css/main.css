@@ -3270,6 +3270,18 @@ input, select, textarea {
 		margin-left: -26px;
 		margin-top: 3.45%;
 	}
+
+	/* Add this to your existing CSS */
+	.description {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.5s ease-in-out;
+	}
+
+	.description.show {
+		max-height: 1000px; /* Adjust this value based on the maximum height of your content */
+	}
+
 	
 	/* Content goes here */
 	.text-box{
