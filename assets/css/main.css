@@ -3271,7 +3271,7 @@ input, select, textarea {
 		margin-top: 3.45%;
 	}
 
-	/* Animation to description*/
+	/* Add this to your existing CSS */
 	.description {
 		max-height: 0;
 		overflow: hidden;
@@ -3280,11 +3280,6 @@ input, select, textarea {
 
 	.description.show {
 		max-height: 1000px; /* Adjust this value based on the maximum height of your content */
-	}
-
-	/* Pointer cursor when hovering over titles */
-	.container .text-box h2{
-		cursor: pointer;
 	}
 
 	
