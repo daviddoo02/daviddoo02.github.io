@@ -3310,7 +3310,14 @@ input, select, textarea {
 		left: 0px; */
 		margin-left: 0px;
 		margin-top: 3%;
+		transition: transform 0.3s ease;
 	}
+
+	/* Rotate arrow when h2 is clicked */
+	.container.right.open::before {
+		transform: rotate(90deg);
+	}
+
 	
 	
 /* End of Timeline Section */

@@ -196,32 +196,42 @@
 			document.addEventListener('DOMContentLoaded', function() {
 				var headers = document.querySelectorAll('.container .text-box h2');
 				var descriptions = document.querySelectorAll('.container .text-box .description');
-
-				// Expand descriptions for specific containers
+		
+				// Initially expand specific descriptions
 				var specificContainers = [
 					descriptions[0], // Legolas - an open-source Biped
 				];
-
+		
 				specificContainers.forEach(function(description) {
 					if (description) {
 						description.style.maxHeight = description.scrollHeight + "px";
+						var container = description.closest('.container');
+						if (container) {
+							container.classList.add('open');
+						}
 					}
 				});
-
+		
+				// Click event for expanding/collapsing descriptions
 				headers.forEach(function(header) {
 					header.addEventListener('click', function() {
-						var description = this.nextElementSibling;
-
+						var container = this.closest('.container');
+						var description = container.querySelector('.description');
+		
 						if (!description) return; // Ensure description exists
-
+		
 						if (description.style.maxHeight) {
+							// Collapse description
 							description.style.maxHeight = null;
+							container.classList.remove('open');
 						} else {
+							// Expand description
 							description.style.maxHeight = description.scrollHeight + "px";
+							container.classList.add('open');
 						}
 					});
 				});
 			});
-		</script>
+		</script>		
 	</body>
 </html>
